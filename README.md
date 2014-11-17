@@ -18,27 +18,26 @@ You can either use Composer to get the files for you or download them directly.
 
 Composer install
 ----------------
-To add PHPTAL as a local, per-project dependency to your project, simply add a 
-dependency on `phptal/phptal` to your project's `composer.json` file and run 
+To add PHPTAL as a local, per-project dependency to your project, simply run the command `composer require phptal/phptal` from the root of your project. This will add a dependency for the latest PHPTAL version to your projects `compiser.json` file. 
+
+Alternatively, add a dependency on `phptal/phptal` to your project's `composer.json` file manually and run 
 Composer with the `build` or `update` command. 
 
-Here is a minimal example of a `composer.json` file that just defines a 
-development-time dependency on PHPTAL 1.2:
+Here is a minimal example of a `composer.json` file that defines a dependency on PHPTAL 1.3:
 
     {
         "require": {
-            "phptal/phptal": "1.2.*"
+            "phptal/phptal": "~1.3.0"
         }
     }
     
-For a standalone, system-wide installation via Composer, a composer.json similar 
-to the one shown below can be used from an arbitary directory.
+For a standalone (system-wide) installation via Composer, `composer require phptal/phptal --global` can be used. Alternatively, a composer.json similar to the one shown below can be used from an arbitary directory.
 
     {
         "name": "phptal",
         "description": "phptal",
         "require": {
-            "phptal/phptal": "1.2.*"
+            "phptal/phptal": "~1.3.0"
         },
         "config": {
             "bin-dir": "/path/where/to/install/phptal/"
@@ -107,13 +106,8 @@ Installing development requirements with Composer
 --------------------------------------------------
 All the development dependencies can be installed with Composer by running the
 install command (or the update command, if you've already got a stable version 
-through Composer) with the `--dev` flag from the root of your project directory:
+through Composer) from the root of your project directory.
 
-    php composer.phar install --dev
-
-or if you have Composer installed as a binary:
-
-    composer install --dev 
 
 [phptal]: http://phptal.org/
 [composer-install]: http://getcomposer.org/download/
